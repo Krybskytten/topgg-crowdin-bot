@@ -1,0 +1,23 @@
+{
+  "name": "topgg-crowdin-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Krybskytten/topgg-crowdin-bot.git"
+  },
+  "author": "https://github.com/Krybskytten",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Krybskytten/topgg-crowdin-bot/issues"
+  },
+  "homepage": "https://github.com/Krybskytten/topgg-crowdin-bot#readme",
+  "dependencies": {
+    "@crowdin/crowdin-api-client": "^1.12.4",
+    "discord.js": "^13.6.0"
+  }
+}
