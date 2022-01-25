@@ -19,10 +19,16 @@ const config = require(`./botconfig/config.json`);
 const discord_token = config.discord_token;
 const crowdin_token = config.crowdin_token;
 const prefix = config.prefix;
+const crowdin_webproject_id = config.crowdin_webproject_id;
+const crowdin_backendproject_id = config.crowdin_backendproject_id;
+const desired_channel = config.desired_channel;
 
 if (!discord_token) return console.log(`You haven't set your Discord Token in the config.json file!`.red);
 if (!crowdin_token) return console.log(`You haven't set your Crowdin Token in the config.json file!`.red);
 if (!prefix) return console.log(`You haven't set your Bot Prefix in the config.json file!`.red);
+if (!crowdin_webproject_id) return console.log(`You haven't set your Crowdin Webproject Id in the config.json file!`.red);
+if (!crowdin_backendproject_id) return console.log(`You haven't set your Crowdin Backendproject Id in the config.json file!`.red);
+if (!desired_channel) return console.log(`You haven't set your Desired Command Channel in the config.json file!`.red);
 
 const Discord = require("discord.js");
 const client = new Discord.Client({
