@@ -15,7 +15,6 @@ console.log(colors.random("Trying to boot..."));
 /*              BOT INITIALIZATION             */
 
 const config = require(`./botconfig/config.json`);
-const settings = require(`./botconfig/settings.json`);
 
 const discord_token = config.discord_token;
 const crowdin_token = config.crowdin_token;

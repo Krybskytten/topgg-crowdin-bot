@@ -1,6 +1,8 @@
 {
     "discord_token": "",
     "crowdin_token": "",
+    "crowdin_webproject_id": "450156",
+    "crowdin_backendproject_id": "456000",
     "prefix": "",
     "desired_channel": "",
     "owner": ""

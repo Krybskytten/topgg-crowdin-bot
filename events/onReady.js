@@ -8,7 +8,7 @@ module.exports = {
         console.log(`${client.user.username} is online!`.green)
 
         let statuses = [
-            `:wave:`,
+            `@${client.user.tag}`,
             `${prefix}help`
             ]
 
