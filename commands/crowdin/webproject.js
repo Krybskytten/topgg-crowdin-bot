@@ -1,3 +1,8 @@
+	/**
+	* @description Fetches information about the TOP.GG webproject.
+	* @author Krybskytten
+	*/
+
 const config = require ("../../botconfig/config.json")
 const desired_channel = config.desired_channel;
 const crowdin_token = config.crowdin_token;
@@ -26,7 +31,7 @@ module.exports = {
                   headers: {'content-type': 'application/json', authorization: `Bearer ${crowdin_token}`}
                 })
                 .then(res => res.json()).then(json => {
-                  console.log(json);
+                //  console.log(json);
                 
                   let successembed = new MessageEmbed()
                  

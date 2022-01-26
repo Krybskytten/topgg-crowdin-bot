@@ -1,3 +1,8 @@
+	/**
+	* @description Help message.
+	* @author Naman Vrati
+	*/
+
 const config = require ("./../../botconfig/config.json")
 const prefix = config.prefix;
 const desired_channel = config.desired_channel;

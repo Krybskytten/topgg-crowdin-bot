@@ -1,3 +1,8 @@
+	/**
+	* @description Status change + message in console that the bot is started.
+	* @author Krybskytten
+	*/
+
 const config = require ("../botconfig/config.json")
 const prefix = config.prefix;
 module.exports = {
