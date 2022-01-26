@@ -31,7 +31,9 @@ module.exports = {
                   headers: {'content-type': 'application/json', authorization: `Bearer ${crowdin_token}`}
                 })
                 .then(res => res.json()).then(json => {
-                //  console.log(json);
+                // console.log(json);
+                  var english = `${json.data.sourceLanguageId}`
+                  var english2 = english.replace("en", ":flag_gb:")
                   var romanian = `${json.data.targetLanguageIds[0]}`
                   var romanian2 = romanian.replace("ro", ":flag_ro:")
                   var french = `${json.data.targetLanguageIds[1]}`
@@ -72,8 +74,8 @@ module.exports = {
                   var swedish2 = swedish.replace("sv-SE", ":flag_se:")
                   var turkish = `${json.data.targetLanguageIds[19]}`
                   var turkish2 = turkish.replace("tr", ":flag_tr:")
-                  var english = `${json.data.targetLanguageIds[20]}`
-                  var english2 = english.replace("uk", ":flag_gb:")
+                  var ukrainian = `${json.data.targetLanguageIds[20]}`
+                  var ukrainian2 = ukrainian.replace("uk", ":flag_ua:")
                   var vietnamese = `${json.data.targetLanguageIds[21]}`
                   var vietnamese2 = vietnamese.replace("vi", ":flag_vn:")                 
                   var brazilian = `${json.data.targetLanguageIds[22]}`
@@ -91,9 +93,9 @@ module.exports = {
                   var filipino = `${json.data.targetLanguageIds[28]}`
                   var filipino2 = filipino.replace("fil", ":flag_ph:")         
                   var quebec = `${json.data.targetLanguageIds[29]}` // NO FLAG
-                  var quebec2 = quebec.replace("fr-QC", ":flag_black:(French, Québec) ") // NO FLAG
+                  var quebec2 = quebec.replace("fr-QC", ":flag_white: (French, Québec) ") // NO FLAG
                   var sorani = `${json.data.targetLanguageIds[30]}`// NO FLAG
-                  var sorani2 = sorani.replace("ckb", ":flag_black: (Kurdish)") // NO FLAG
+                  var sorani2 = sorani.replace("ckb", ":flag_white: (Kurdish)") // NO FLAG
                   var scots = `${json.data.targetLanguageIds[31]}`
                   var scots2 = scots.replace("sco", ":scotland:")
             
@@ -102,8 +104,8 @@ module.exports = {
                         .setColor(`${embed_colour}`)
                         .addField("General", `\n **Name:** ${json.data.name} \n **Description:** ${json.data.description} \n **Last activity:** ${json.data.lastActivity}  `)
                         .setThumbnail(`${json.data.logo}`)
-                        .addField("Languages", `${romanian2} | ${french2} | ${spanish2} | ${arabic2} | ${czech2} | ${danish2} | ${german2} | ${greek2} | ${finish2} | ${hebrew2} | ${hungarian2} | ${italian2} | ${japanese2} | ${korean2} | ${dutch2} | ${norwegian2} | ${polish2} | ${russian2} | ${swedish2} | ${turkish2} | ${english2} | ${vietnamese2} | ${brazilian2} | ${indonesian2} | ${bengali2} | ${azerbaijani2} | ${hindi2} | ${malay2} | ${filipino2} | ${scots2}`, true)
-                        .addField("Languages with no flag", `${quebec2} \n ${sorani2} `)
+                        .addField("Languages", `${english2} | ${romanian2} | ${french2} | ${spanish2} | ${arabic2} | ${czech2} | ${danish2} | ${german2} | ${greek2} | ${finish2} | ${hebrew2} | ${hungarian2} | ${italian2} | ${japanese2} | ${korean2} | ${dutch2} | ${norwegian2} | ${polish2} | ${russian2} | ${swedish2} | ${turkish2} | ${ukrainian2} | ${vietnamese2} | ${brazilian2} | ${indonesian2} | ${bengali2} | ${azerbaijani2} | ${hindi2} | ${malay2} | ${filipino2} | ${scots2}`, true)
+                        .addField("Other languages", `${quebec2} \n ${sorani2} `)
                         .setTimestamp()  
                         return message.channel.send({ embeds: [successembed] })  
                 })
