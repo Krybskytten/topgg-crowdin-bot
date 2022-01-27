@@ -32,6 +32,8 @@ module.exports = {
                 })
                 .then(res => res.json()).then(json => {
                 // console.log(json);
+                if (`${json.error.code}` === "401" || "403" || "404" || "405") return message.reply(`Something went wrong at this time.\n **Error:** ${json.error.code} (${json.error.message})`)
+                
                   var english = `${json.data.sourceLanguageId}`
                   var english2 = english.replace("en", ":flag_gb:")
                   var romanian = `${json.data.targetLanguageIds[0]}`
